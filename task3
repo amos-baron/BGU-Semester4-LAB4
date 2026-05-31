@@ -1,0 +1,9 @@
+
+readelf -s offensive | grep " main"
+
+
+
+readelf -S offensive
+
+
+
