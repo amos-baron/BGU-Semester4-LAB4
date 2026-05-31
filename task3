@@ -1,0 +1,21 @@
+readelf -s deep_thought | grep _start
+
+
+The entry point (e_entry) in a 32-bit ELF header is located at file offset 0x18 (24 bytes).
+
+Execute your program: ./hexeditplus
+
+Enter F to set the file name. Input: deep_thought
+
+Enter U to set unit size to 4 bytes. Input: 4
+
+Enter L to load the current entry point into memory. Input: 18 1 (Offset 0x18, length 1)
+
+Enter y to modify the memory buffer. Input: 0 8048350 (Memory location 0, new virtual address)
+
+Enter S to save the modified buffer back to the file. Input: 0 18 1 (Source memory 0, target file offset 0x18, length 1)
+
+Enter Q to quit.
+
+Execute ./deep_thought in your terminal to verify the fix.
+
