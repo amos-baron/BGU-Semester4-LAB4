@@ -1,0 +1,5 @@
+#task 0a
+readelf -h abc
+1.Entry point address:               0x80483b0 
+2.Number of program headers:         8
+
