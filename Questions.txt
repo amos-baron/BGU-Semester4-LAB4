@@ -1,0 +1,7 @@
+1. 
+    On memory display if the address is not 0 then it should be the acual address of an offset in mem_buf,
+    and should it avoid segfault?
+2. 
+    what is the expected behavior for deep thought? instead of the loop.4
+3. 
+    

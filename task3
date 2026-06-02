@@ -1,9 +1,13 @@
-
 readelf -s offensive | grep " main"
+62: 0804841d    23 FUNC    GLOBAL DEFAULT   13 main
 
+readelf -S offensive  | grep .text
+  [13] .text             PROGBITS        08048320 000320 000192 00  AX  0   0 16
 
+python3:
+    hex(0x0804841d - 0x08048320 + 0x320)
+    0x41d
 
-readelf -S offensive
-
-
-
+Steps:
+F
+offensive
