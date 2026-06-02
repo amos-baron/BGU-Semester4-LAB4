@@ -1,0 +1,20 @@
+readelf -s ntsc | grep count_digits
+    53: 0804847d    93 FUNC    GLOBAL DEFAULT   13 count_digits
+
+ readelf -S ntsc | grep .text
+  [13] .text             PROGBITS        08048380 000380 000282 00  AX  0   0 16
+
+python3:
+    hex(0x0804847d - 0x08048380 + 0x380)
+    0x47d
+
+readelf -s task4 | grep " main"
+    36: 000011d7    71 FUNC    GLOBAL DEFAULT   14 main
+
+readelf -S task4 | grep .text
+  [14] .text             PROGBITS        00001070 001070 0001ae 00  AX  0   0 16
+
+python3:
+    0x000011d7 == 4567
+
+dd if=task4 of=ntsc bs=1 count=71 skip=4567 seek=1149 conv=notrunc
